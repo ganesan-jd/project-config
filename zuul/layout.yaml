@@ -26,7 +26,7 @@ pipelines:
       smtp:
         #TODO: Update these to real e-mail addresses
         to: openstack-ci@nimblestorage.com
-        from: zuul@gan-openstack-ci-master.lab.nimblestorage.com
+        from: zuul@openstack-ci.lab.nimblestorage.com
         subject: Upstream change {change} has a merge failure
 
 
@@ -43,13 +43,13 @@ pipelines:
       smtp:
         #TODO: Update these to real e-mail addresses
         to: openstack-ci@nimblestorage.com
-        from: zuul@gan-openstack-ci-master.lab.nimblestorage.com
+        from: zuul@openstack-ci.lab.nimblestorage.com
         subject: 'Silent check of {change.project} {change.number},{change.patchset} passed'
     failure:
       smtp:
         #TODO: Update these to real e-mail addresses
         to: openstack-ci@nimblestorage.com
-        from: zuul@gan-openstack-ci-master.lab.nimblestorage.com
+        from: zuul@openstack-ci.lab.nimblestorage.com
         subject: 'Silent check of {change.project} {change.number},{change.patchset} failed'
 
 
