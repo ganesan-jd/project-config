@@ -47,10 +47,11 @@ diskimages:
 providers:
   - name: local_01
 #TODO: Update the provider username, password, and authurl
-    username: '<%= admin %>'
-    password: '<%= openstack %>'
-    auth-url: 'http://10.18.114.66:5000/v2.0'
-    project-name: 'admin'
+    cloud: local_01
+    region-name: RegionOne
+    networks: 
+      - name: 'flat-provider-network'
+    boot-timeout: 120
     max-servers: 2
     images:
       - name: dpc
