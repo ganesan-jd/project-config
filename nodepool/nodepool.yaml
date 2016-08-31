@@ -29,7 +29,6 @@ labels:
     min-ready: 1
     providers:
       - name: local_01
-      - name: local_02
 
 diskimages:
     - name: dpc
@@ -49,20 +48,6 @@ providers:
   - name: local_01
 #TODO: Update the provider username, password, and authurl
     cloud: local_01
-    region-name: RegionOne
-    networks: 
-      - name: 'flat-provider-network'
-    boot-timeout: 300
-    max-servers: 2
-    images:
-      - name: dpc
-        min-ram: 8192
-        diskimage: dpc
-        username: jenkins
-        private-key: '/home/nodepool/.ssh/id_rsa'
-  - name: local_02
-#TODO: Update the provider username, password, and authurl
-    cloud: local_02
     region-name: RegionOne
     networks: 
       - name: 'flat-provider-network'
